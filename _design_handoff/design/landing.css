@@ -1,0 +1,77 @@
+/* landing.css — hero, sections, pricing, cta */
+
+/* ---- Hero ----------------------------------------------------- */
+.hero { padding: 84px 0 30px; overflow: hidden; }
+.hero-grid.one { text-align: center; }
+.hero-grid.two { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.hero-left { padding-top: 70px; }
+.hero-copy { }
+.hero-cta { display: flex; align-items: center; gap: 22px; margin-top: 34px; }
+.hero-grid.one .hero-cta { justify-content: center; }
+
+/* hero window mock */
+.hero-window {
+  background: var(--bg); border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow-lift); border: 1px solid var(--line-2);
+  max-width: 760px; margin: 0 auto; overflow: hidden;
+}
+.hero-grid.two .hero-window { margin: 0; max-width: none; }
+.hw-bar { display: flex; align-items: center; gap: 7px; padding: 13px 16px; border-bottom: 1px solid var(--line-2); background: var(--surface-2); }
+.hw-bar .dot { width: 11px; height: 11px; border-radius: 50%; }
+.hw-bar .dot.r { background: #ff5f57; } .hw-bar .dot.y { background: #febc2e; } .hw-bar .dot.g { background: #28c840; }
+.hw-url { margin-left: 10px; font-size: 12px; color: var(--ink-3); }
+.hw-body { padding: 22px; display: grid; gap: 18px; }
+.hw-term { background: #1d1d1f; border-radius: 14px; padding: 18px 20px; font-size: 13px; line-height: 1.85; color: #e6e6e6; overflow-x: auto; }
+.hw-term .c-3 { color: #6b8afd; } .hw-term .c-k { color: #d291ff; } .hw-term .c-s { color: #6fdc8c; } .hw-term .c-d { color: #6e6e73; }
+.hw-ok { margin-top: 10px; color: #9aa0a6; display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+.ok-dot { width: 7px; height: 7px; border-radius: 50%; background: #28c840; box-shadow: 0 0 0 4px rgba(40,200,64,.18); }
+.hw-models { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.hw-model { display: flex; align-items: center; gap: 11px; padding: 11px 14px; border: 1px solid var(--line-2); border-radius: 13px; font-size: 14px; font-weight: 550; }
+.hw-model span:nth-child(2) { flex: 1; }
+.hw-on { color: #28c840; font-size: 9px; }
+
+/* ---- Tool strip ----------------------------------------------- */
+.tool-strip { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.tool-chip { font-size: 14px; font-weight: 550; color: var(--ink-2); background: var(--surface); padding: 9px 18px; border-radius: var(--pill); }
+
+/* ---- Values --------------------------------------------------- */
+.value-card { display: flex; gap: 18px; align-items: flex-start; padding: 30px; background: var(--bg); border: 1px solid var(--line-2); border-radius: var(--radius); transition: box-shadow .25s, transform .25s; }
+.value-card:hover { box-shadow: var(--card-shadow); transform: translateY(-2px); }
+.value-ic { width: 46px; height: 46px; border-radius: 13px; background: var(--accent-soft); color: var(--accent-ink); display: grid; place-items: center; flex: none; }
+html[data-dir="mono"] .value-ic { color: var(--ink); }
+
+/* ---- Manifesto ------------------------------------------------ */
+.manifesto-quote { font-size: clamp(28px, 4vw, 46px); line-height: 1.18; letter-spacing: -0.02em; font-weight: 640; margin-top: 22px; text-wrap: balance; color: var(--ink); }
+
+/* ---- Pricing -------------------------------------------------- */
+.price-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 28px 28px; display: flex; flex-direction: column; gap: 14px; transition: box-shadow .25s, transform .25s; }
+.price-card:hover { box-shadow: var(--card-shadow); transform: translateY(-3px); }
+.price-card.hi { border-color: transparent; box-shadow: 0 0 0 2px var(--accent), var(--card-shadow-lift); }
+.price-tag { font-size: 12px; font-weight: 700; color: var(--accent-ink); letter-spacing: 0.02em; text-transform: uppercase; }
+html[data-dir="mono"] .price-tag { color: var(--ink-2); }
+.price-amt { font-size: 38px; font-weight: 680; letter-spacing: -0.025em; display: flex; align-items: baseline; gap: 8px; margin: 2px 0 4px; }
+.price-unit { font-size: 13px; font-weight: 500; color: var(--ink-3); letter-spacing: 0; }
+.price-feats { display: flex; flex-direction: column; gap: 11px; margin: 6px 0 10px; }
+.price-feat { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--ink-2); }
+.price-feat svg { color: var(--accent); flex: none; }
+html[data-dir="mono"] .price-feat svg { color: var(--ink); }
+.price-card .btn { margin-top: auto; }
+
+/* ---- CTA band ------------------------------------------------- */
+.cta-band { padding: 96px 0; background: linear-gradient(160deg, color-mix(in oklab, var(--accent) 92%, #000) 0%, var(--accent) 100%); }
+html[data-dir="mono"] .cta-band { background: linear-gradient(160deg, #2a2a2d, #1d1d1f); }
+.cta-white { background: #fff; color: var(--ink); }
+.cta-white:hover { background: rgba(255,255,255,0.9); }
+.cta-clear { background: rgba(255,255,255,0.16); color: #fff; backdrop-filter: blur(6px); }
+.cta-clear:hover { background: rgba(255,255,255,0.26); }
+
+@media (max-width: 880px) {
+  .hero-grid.two { grid-template-columns: 1fr; }
+  .hw-models { grid-template-columns: 1fr 1fr; }
+  .value-card { padding: 24px; }
+}
+@media (max-width: 560px) {
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-grid.one .hero-cta { align-items: center; }
+  .hw-models { grid-template-columns: 1fr; }
+}
