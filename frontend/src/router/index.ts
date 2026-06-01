@@ -183,6 +183,12 @@ const routes: RouteRecordRaw[] = [
     meta: { public: true, title: 'LLMRELAY' }
   },
   {
+    path: '/u/usage',
+    name: 'key-usage-llmrelay',
+    component: () => import('@/views/KeyUsageLLMRELAY.vue'),
+    meta: { public: true, title: 'keyusage.nav' }
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/user/DashboardView.vue'),
