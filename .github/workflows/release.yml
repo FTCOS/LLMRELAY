@@ -304,3 +304,20 @@ jobs:
           git add backend/cmd/server/VERSION
           git commit -m "chore: sync VERSION to ${VERSION} [skip ci]"
           git push origin HEAD:${{ github.event.repository.default_branch }}
+
+  deploy-to-bwg:
+    needs: [release]
+    if: ${{ needs.release.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to BWG (LLMRELAY)
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.BWG_SSH_HOST }}
+          username: ${{ secrets.BWG_SSH_USER }}
+          key: ${{ secrets.BWG_SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/sub2api
+            docker compose pull
+            docker compose up -d
+            echo "Deploy done: $(docker inspect sub2api --format '{{.Config.Image}}' 2>/dev/null)"
