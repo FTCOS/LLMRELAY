@@ -180,13 +180,13 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'Landing',
     component: () => import('@/views/Landing.vue'),
-    meta: { public: true, title: 'LLMRELAY' }
+    meta: { requiresAuth: false, title: 'LLMRELAY' }
   },
   {
     path: '/u/usage',
     name: 'key-usage-llmrelay',
     component: () => import('@/views/KeyUsageLLMRELAY.vue'),
-    meta: { public: true, title: 'keyusage.nav' }
+    meta: { requiresAuth: false, title: 'keyusage.nav' }
   },
   {
     path: '/dashboard',
