@@ -197,7 +197,6 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
       </header>
 
       <main class="content">
-        <router-view />
         <slot />
       </main>
     </div>

@@ -203,7 +203,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/keys',
     name: 'Keys',
-    component: () => import('@/views/user/KeysView.vue'),
+    component: () => import('@/views/user/KeysLLMRELAY.vue'),
     meta: {
       requiresAuth: true,
       requiresAdmin: false,
@@ -263,7 +263,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/profile',
     name: 'Profile',
-    component: () => import('@/views/user/ProfileView.vue'),
+    component: () => import('@/views/user/ProfileLLMRELAY.vue'),
     meta: {
       requiresAuth: true,
       requiresAdmin: false,

@@ -145,5 +145,39 @@
     "empty": "No data yet",
     "loadErr": "Failed to load, please try again.",
     "ok": "OK"
+  },
+  "keys": {
+    "title": "API Keys",
+    "sub": "Keys for native tools and SDKs",
+    "new": "New key",
+    "search": "Search name",
+    "cols": { "name": "Name", "key": "Key", "group": "Group", "status": "Status", "usage": "Usage (mo)", "created": "Created", "expires": "Expires", "action": "Actions" },
+    "active": "Active", "inactive": "Inactive", "exhausted": "Quota used", "expired": "Expired",
+    "copy": "Copy", "copied": "Copied", "enable": "Enable", "disable": "Disable", "revoke": "Revoke",
+    "never": "Never", "unlimited": "Unlimited",
+    "empty": "No keys yet — create one from the top right.",
+    "createTitle": "New API Key",
+    "fName": "Name", "fNamePh": "e.g. my-app", "fGroup": "Group", "fGroupAuto": "Default (auto)",
+    "fQuota": "Quota limit (USD, 0 = unlimited)", "fExpiry": "Expires in (days, blank = never)",
+    "cancel": "Cancel", "save": "Create", "saving": "Creating…",
+    "created": "Created — copy and store it now.",
+    "revokeConfirm": "Revoke this key? This cannot be undone.",
+    "revoked": "Revoked", "updated": "Updated", "err": "Action failed, please try again."
+  },
+  "profile": {
+    "title": "Profile",
+    "sub": "Manage your account, security and notifications",
+    "secAccount": "Account", "secSecurity": "Security", "secNotify": "Balance alerts",
+    "username": "Name", "usernamePh": "What should we call you",
+    "email": "Email", "avatar": "Avatar URL", "avatarPh": "https://…",
+    "role": "Role", "roleAdmin": "Admin", "roleUser": "User",
+    "balance": "Balance",
+    "save": "Save", "saving": "Saving…", "saved": "Saved",
+    "curPwd": "Current password", "newPwd": "New password", "confirmPwd": "Confirm new password",
+    "pwdPh": "At least 8 characters", "changePwd": "Change password", "changing": "Submitting…", "pwdChanged": "Password updated",
+    "notifyEnable": "Email me when balance is low", "notifyThreshold": "Alert threshold (USD)",
+    "notifyHint": "We'll email you when your balance drops below this amount.",
+    "err": "Action failed, please try again.",
+    "pwdMismatch": "Passwords do not match.", "pwdShort": "New password must be at least 8 characters."
   }
 }

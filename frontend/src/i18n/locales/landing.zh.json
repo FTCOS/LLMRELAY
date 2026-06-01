@@ -145,5 +145,39 @@
     "empty": "暂无数据",
     "loadErr": "加载失败，请稍后重试。",
     "ok": "成功"
+  },
+  "keys": {
+    "title": "API Keys",
+    "sub": "用于接入原生工具与 SDK 的密钥",
+    "new": "新建 Key",
+    "search": "搜索名称",
+    "cols": { "name": "名称", "key": "Key", "group": "分组", "status": "状态", "usage": "本月用量", "created": "创建", "expires": "过期", "action": "操作" },
+    "active": "正常", "inactive": "已停用", "exhausted": "配额用尽", "expired": "已过期",
+    "copy": "复制", "copied": "已复制", "enable": "启用", "disable": "停用", "revoke": "撤销",
+    "never": "永不", "unlimited": "不限量",
+    "empty": "还没有 Key，点右上角新建一个。",
+    "createTitle": "新建 API Key",
+    "fName": "名称", "fNamePh": "例如 my-app", "fGroup": "分组", "fGroupAuto": "默认（自动）",
+    "fQuota": "配额上限（USD，0 = 不限）", "fExpiry": "有效期（天，留空 = 永不过期）",
+    "cancel": "取消", "save": "创建", "saving": "创建中…",
+    "created": "已创建，请立即复制并妥善保存。",
+    "revokeConfirm": "确定撤销这个 Key？此操作不可恢复。",
+    "revoked": "已撤销", "updated": "已更新", "err": "操作失败，请稍后重试。"
+  },
+  "profile": {
+    "title": "个人资料",
+    "sub": "管理你的账号、安全与通知设置",
+    "secAccount": "账号", "secSecurity": "安全", "secNotify": "余额通知",
+    "username": "昵称", "usernamePh": "如何称呼你",
+    "email": "邮箱", "avatar": "头像链接", "avatarPh": "https://…",
+    "role": "角色", "roleAdmin": "管理员", "roleUser": "用户",
+    "balance": "账户余额",
+    "save": "保存", "saving": "保存中…", "saved": "已保存",
+    "curPwd": "当前密码", "newPwd": "新密码", "confirmPwd": "确认新密码",
+    "pwdPh": "至少 8 位字符", "changePwd": "修改密码", "changing": "提交中…", "pwdChanged": "密码已更新",
+    "notifyEnable": "余额不足时邮件提醒", "notifyThreshold": "提醒阈值（USD）",
+    "notifyHint": "当余额低于该值时，我们会向你的邮箱发送提醒。",
+    "err": "操作失败，请稍后重试。",
+    "pwdMismatch": "两次输入的密码不一致。", "pwdShort": "新密码至少需要 8 位字符。"
   }
 }
