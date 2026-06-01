@@ -7,7 +7,7 @@ RED='\033[0;31m'; GRN='\033[0;32m'; YLW='\033[0;33m'; NC='\033[0m'
 
 BWG=root@192.69.95.33
 IMG=sub2api-llmrelay:latest
-CODE_DIR="$(cd "$(dirname "$0")" && pwd)"
+CODE_DIR=$(git -C $(dirname $0) rev-parse --show-toplevel)
 SKIP_BUILD=0
 [[ "${1:-}" == "--skip-build" ]] && SKIP_BUILD=1
 
