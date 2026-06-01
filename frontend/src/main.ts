@@ -5,6 +5,7 @@ import router from './router'
 import i18n, { initI18n } from './i18n'
 import { useAppStore } from '@/stores/app'
 import './style.css'
+import './assets/styles/tokens.css' // LLMRELAY: 全局设计 token（Apple 清新风 + 3 方向）
 
 function initThemeClass() {
   const savedTheme = localStorage.getItem('theme')
@@ -28,9 +29,8 @@ async function bootstrap() {
   appStore.initFromInjectedConfig()
 
   // Set document title immediately after config is loaded
-  if (appStore.siteName && appStore.siteName !== 'Sub2API') {
-    document.title = `${appStore.siteName} - AI API Gateway`
-  }
+  // LLMRELAY: 默认品牌名 LLMRELAY,从 settings/public 覆盖
+  document.title = `${appStore.siteName && appStore.siteName !== 'Sub2API' ? appStore.siteName : 'LLMRELAY'} - AI API Gateway`
 
   await initI18n()
 

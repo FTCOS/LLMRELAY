@@ -1,0 +1,75 @@
+/* ============================================================
+   LLMRELAY — global design tokens (Apple-fresh)
+   Import ONCE in main.ts:  import './assets/styles/tokens.css'
+   Direction is switched via <html data-dir="classic|equity|mono">.
+   These are CSS custom properties + shared keyframes only — component
+   styles live in each .vue file's <style scoped>.
+   ============================================================ */
+
+:root {
+  /* Neutrals (warm-cool balanced, low chroma) */
+  --ink:        #1d1d1f;
+  --ink-2:      #515154;
+  --ink-3:      #86868b;
+  --ink-4:      #aeaeb2;
+  --bg:         #ffffff;
+  --surface:    #f5f5f7;
+  --surface-2:  #fbfbfd;
+  --line:       rgba(0, 0, 0, 0.10);
+  --line-2:     rgba(0, 0, 0, 0.055);
+  --card-shadow:      0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 28px rgba(0, 0, 0, 0.06);
+  --card-shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.06), 0 22px 50px rgba(0, 0, 0, 0.10);
+
+  /* Accent — overridden per direction below */
+  --accent:       #0071e3;
+  --accent-press: #0077ed;
+  --accent-soft:  #e9f2ff;
+  --accent-ink:   #0066cc;
+  --tint:         #f5f5f7;
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius:    18px;
+  --radius-lg: 28px;
+  --pill:      980px;
+
+  /* Layout */
+  --maxw:  1120px;
+
+  /* Type */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+          "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", system-ui, sans-serif;
+  --mono: "SF Mono", ui-monospace, "JetBrains Mono", "Menlo", monospace;
+}
+
+/* ---- Directions ----------------------------------------------- */
+html[data-dir="classic"] {
+  --accent: #0071e3; --accent-press: #0077ed; --accent-soft: #e9f2ff;
+  --accent-ink: #0066cc; --tint: #f5f5f7;
+}
+html[data-dir="equity"] {
+  /* matches the original sub2api brand teal (#14b8a6) family */
+  --accent: #00a386; --accent-press: #00b594; --accent-soft: #e3f4ef;
+  --accent-ink: #008a72; --tint: #f0f6f4;
+}
+html[data-dir="mono"] {
+  --accent: #1d1d1f; --accent-press: #000000; --accent-soft: #ededed;
+  --accent-ink: #1d1d1f; --tint: #f5f5f5;
+}
+/* default when no data-dir present */
+html:not([data-dir]) { color-scheme: light; }
+
+/* ---- Shared keyframes (reusable across components) ------------ */
+@keyframes llmrelay-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes llmrelay-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+@keyframes llmrelay-line-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: none; }
+}

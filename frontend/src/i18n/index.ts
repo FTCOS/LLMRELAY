@@ -12,6 +12,13 @@ const localeLoaders: Record<LocaleCode, () => Promise<{ default: LocaleMessages 
   zh: () => import('./locales/zh')
 }
 
+// ── LLMRELAY: 落地页 landing.* 文案（独立 JSON，按需合并到主 locale）──
+// 需要 tsconfig 里 "resolveJsonModule": true（Vite 默认支持 JSON import）。
+const landingLoaders: Record<LocaleCode, () => Promise<{ default: LocaleMessages }>> = {
+  en: () => import('./locales/landing.en.json'),
+  zh: () => import('./locales/landing.zh.json')
+}
+
 function isLocaleCode(value: string): value is LocaleCode {
   return value === 'en' || value === 'zh'
 }
@@ -50,6 +57,15 @@ export async function loadLocaleMessages(locale: LocaleCode): Promise<void> {
   const loader = localeLoaders[locale]
   const module = await loader()
   i18n.global.setLocaleMessage(locale, module.default)
+
+  // LLMRELAY: 合并落地页文案（landing.* 命名空间）
+  try {
+    const landing = await landingLoaders[locale]()
+    i18n.global.mergeLocaleMessage(locale, landing.default)
+  } catch (err) {
+    console.warn('[i18n] failed to load landing messages for', locale, err)
+  }
+
   loadedLocales.add(locale)
 }
 

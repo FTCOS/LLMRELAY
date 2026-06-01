@@ -1,0 +1,63 @@
+{
+  "landing": {
+    "nav": { "product": "Product", "models": "Models", "pricing": "Pricing", "docs": "Docs", "usage": "Usage lookup", "login": "Sign in", "signup": "Get started" },
+    "hero": {
+      "eyebrow": "Model Equality · 模型平权",
+      "title1": "Top models,",
+      "title2": "for everyone.",
+      "sub": "Claude, GPT, DeepSeek, Qwen — every major model through one key. Pay as you go, no subscription, at the fairest price. The best intelligence, within everyone's reach.",
+      "cta1": "Start free",
+      "cta2": "Models & pricing",
+      "trust": "Relaying for 12,000+ developers · Works with native tools · 99.95% uptime"
+    },
+    "term": {
+      "comment": "# drives native tools · 原生工具直接驱动",
+      "connected": "connected · 4 models · 1 key"
+    },
+    "tools": { "title": "Works seamlessly with the native tools you already use" },
+    "models": {
+      "eyebrow": "Every major model",
+      "title": "One endpoint. Every model.",
+      "sub": "No juggling accounts or invoices. One interface, one bill, switch between models anytime.",
+      "cta": "Browse all models",
+      "claudeNote": "Best for long context, code & reasoning",
+      "gptNote": "General chat & multimodal",
+      "deepseekNote": "High value-for-money reasoning",
+      "qwenNote": "Strong in Chinese & multilingual"
+    },
+    "values": {
+      "eyebrow": "Why LLMRELAY",
+      "title": "Lowering the bar to top models, for all.",
+      "v1t": "One key, every model", "v1d": "A single API key for Claude, GPT, DeepSeek, Qwen and more. OpenAI-compatible — migrate with zero changes.",
+      "v2t": "The fairest price", "v2d": "Token-level billing, shared pooling to split costs. The same models, at a lower unit price — pay only for what you use.",
+      "v3t": "Native tools, no friction", "v3d": "Drives Claude Code, Codex, Cursor and other native tools directly — not a single line of code to change.",
+      "v4t": "Stable & smart routing", "v4d": "Multi-account load balancing, sticky sessions and concurrency control. 99.95% uptime, no dropped requests."
+    },
+    "manifesto": {
+      "eyebrow": "What we believe",
+      "quote": "The best intelligence shouldn't belong to the few.",
+      "body": "The price and barriers of frontier models are keeping too many people out. LLMRELAY pools scattered subscription quotas and distributes them fairly — so a student, a solo developer, or a small team can use the very same models as the largest companies. That is model equality."
+    },
+    "pricing": {
+      "eyebrow": "Transparent pricing",
+      "title": "Pay as you go. No tricks.",
+      "sub": "Top up and start instantly. Balance never expires. Billed by token in real time.",
+      "tag1": "Try it", "name1": "Pay as you go", "price1": "$0", "unit1": "to start",
+      "tag2": "Most popular", "name2": "Wallet top-up", "price2": "-15%", "unit2": "vs. average direct price",
+      "tag3": "Teams", "name3": "Team / Enterprise", "price3": "Custom", "unit3": "quotas & invoicing",
+      "f1a": "Free credit on sign-up", "f1b": "All models available", "f1c": "OpenAI-compatible API", "f1d": "Community support",
+      "f2a": "Token-level billing", "f2b": "Lower unit price via pooling", "f2c": "Multi-key quotas", "f2d": "Usage dashboard & alerts",
+      "f3a": "Member & quota allocation", "f3b": "Dedicated lanes & SLA", "f3c": "Optional self-hosting", "f3d": "Priority support",
+      "cta1": "Start free", "cta2": "Top up now", "cta3": "Contact us"
+    },
+    "ctaband": { "title": "Put top models in everyone's hands — today.", "sub": "Sign up in a minute. Free credit, no credit card.", "cta1": "Start free", "cta2": "Read the docs" },
+    "footer": {
+      "tagline": "Model equality — frontier intelligence, within everyone's reach.",
+      "col1": "Product", "col1a": "Models", "col1b": "Pricing", "col1c": "API Docs", "col1d": "Status",
+      "col2": "Resources", "col2a": "Quickstart", "col2b": "Pooling guide", "col2c": "FAQ", "col2d": "Changelog",
+      "col3": "Company", "col3a": "About", "col3b": "Terms", "col3c": "Privacy", "col3d": "Contact",
+      "copy": "© 2026 LLMRELAY. An open model relay platform."
+    },
+    "dir": { "label": "Theme", "classic": "Classic", "equity": "Equity", "mono": "Mono" }
+  }
+}

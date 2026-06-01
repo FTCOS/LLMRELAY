@@ -178,7 +178,9 @@ const routes: RouteRecordRaw[] = [
   // ==================== User Routes ====================
   {
     path: '/',
-    redirect: '/home'
+    name: 'Landing',
+    component: () => import('@/views/Landing.vue'),
+    meta: { public: true, title: 'LLMRELAY' }
   },
   {
     path: '/dashboard',
