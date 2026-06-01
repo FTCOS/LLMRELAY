@@ -215,7 +215,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/usage',
     name: 'Usage',
-    component: () => import('@/views/user/UsageView.vue'),
+    component: () => import('@/views/user/UsageLLMRELAY.vue'),
     meta: {
       requiresAuth: true,
       requiresAdmin: false,
@@ -287,7 +287,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/purchase',
     name: 'PurchaseSubscription',
-    component: () => import('@/views/user/PaymentView.vue'),
+    component: () => import('@/views/user/PaymentLLMRELAY.vue'),
     meta: {
       requiresAuth: true,
       requiresAdmin: false,

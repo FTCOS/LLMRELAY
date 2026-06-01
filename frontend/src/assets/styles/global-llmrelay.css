@@ -1,0 +1,231 @@
+/**
+ * global-llmrelay.css — LLMRELAY Apple-clean global override
+ * =============================================================
+ * 在 tokens.css 之后由 main.ts import 一次：
+ *   import './assets/styles/tokens.css'
+ *   import './assets/styles/global-llmrelay.css'
+ *
+ * 目标：不改任何 view 的模板/逻辑，仅覆盖 fork 的 @layer components 组件类
+ * （.btn / .card / .glass-card / .badge / .input / .sidebar-* / .switch / .tabs /
+ *  .progress-bar / .modal / .table …），让全站现有 50+ view 自动变成 Apple 清新风。
+ *
+ * 策略：
+ *  - 颜色强调：主色已由 tailwind.config.llmrelay.js 把 primary.* 换成 Apple 蓝，
+ *    所以 *-primary-* 工具类与组件类已自动变蓝；本文件只压平“渐变/毛玻璃/重阴影/大圆角”。
+ *  - 用 var(--token)（来自 tokens.css）统一圆角/阴影/边框，三方向 data-dir 自动响应。
+ *  - 选择器尽量等权重 + 必要处 !important（覆盖 @apply 生成的工具类），但只打视觉、绝不改布局/display。
+ *
+ * 安全：所有覆盖只动 background/border/box-shadow/border-radius/color，
+ *       不动 flex/grid/spacing/display/position，确保不 break 功能与布局。
+ */
+
+/* ============================================================
+   0. 全局底色与字体（压掉 dark 渐变倾向，统一 Apple 中性）
+   ============================================================ */
+body {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  font-family: var(--font) !important;
+}
+::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+/* mesh / 大面积渐变背景一律压成纯净留白 */
+[class*="mesh-gradient"],
+.bg-mesh-gradient { background-image: none !important; background: transparent !important; }
+
+/* ============================================================
+   1. 按钮 —— 渐变压平为 Apple 实色药丸
+   ============================================================ */
+.btn {
+  border-radius: var(--pill) !important;
+  font-weight: 500 !important;
+  transition: transform .12s ease, background .2s ease, box-shadow .2s ease, color .2s ease !important;
+  box-shadow: none !important;
+}
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover { background: var(--accent-press) !important; box-shadow: var(--glow, 0 4px 16px rgba(0,113,227,.16)) !important; }
+
+.btn-secondary {
+  background: #fff !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: none !important;
+}
+.btn-secondary:hover { background: var(--surface) !important; border-color: var(--ink-4) !important; }
+
+.btn-ghost {
+  background: rgba(0,0,0,0.045) !important;
+  color: var(--ink) !important;
+}
+.btn-ghost:hover { background: rgba(0,0,0,0.08) !important; }
+
+/* danger/success/warning 保留语义色但压平渐变 */
+.btn-danger { background: #e5484d !important; box-shadow: none !important; }
+.btn-danger:hover { background: #d33b40 !important; }
+.btn-success { background: #16a34a !important; box-shadow: none !important; }
+.btn-success:hover { background: #138a3f !important; }
+.btn-warning { background: #d97706 !important; box-shadow: none !important; }
+.btn-warning:hover { background: #c06806 !important; }
+
+.btn-sm { border-radius: var(--pill) !important; }
+.btn-md { border-radius: var(--pill) !important; }
+.btn-lg { border-radius: var(--pill) !important; }
+.btn-icon { border-radius: 10px !important; }
+
+/* ============================================================
+   2. 输入 / 选择 —— 统一 Apple focus ring
+   ============================================================ */
+.input,
+input[type="text"], input[type="email"], input[type="password"],
+input[type="number"], input[type="search"], input[type="url"],
+textarea, select {
+  border-radius: 12px !important;
+  border: 1px solid var(--line) !important;
+  background: var(--surface-2) !important;
+  color: var(--ink) !important;
+  transition: border-color .15s, box-shadow .15s, background .15s !important;
+}
+.input:focus,
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: var(--accent) !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 4px var(--accent-soft) !important;
+}
+.input-error { border-color: #e5484d !important; }
+.input-error:focus { box-shadow: 0 0 0 4px rgba(229,72,77,.15) !important; }
+
+/* ============================================================
+   3. 卡片 / 玻璃 —— 收敛毛玻璃与重阴影
+   ============================================================ */
+.card,
+.glass-card,
+.card-glass,
+.glass {
+  background: #fff !important;
+  border: 1px solid var(--line-2) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--card-shadow) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.card-hover:hover { box-shadow: var(--card-shadow-lift) !important; border-color: transparent !important; }
+.card-header, .card-footer { border-color: var(--line-2) !important; }
+
+/* 统计卡图标底色跟随强调系统 */
+.stat-icon-primary { background: var(--accent-soft) !important; color: var(--accent-ink) !important; }
+.stat-value { color: var(--ink) !important; }
+.stat-label { color: var(--ink-3) !important; }
+
+/* ============================================================
+   4. 徽章 —— primary 跟随 Apple 蓝软底
+   ============================================================ */
+.badge { border-radius: var(--pill) !important; font-weight: 600 !important; }
+.badge-primary { background: var(--accent-soft) !important; color: var(--accent-ink) !important; }
+.badge-gray { background: var(--surface) !important; color: var(--ink-3) !important; }
+
+/* ============================================================
+   5. 表格 —— 清新分隔，去重边框
+   ============================================================ */
+.table-container,
+.table-wrapper { border-radius: var(--radius) !important; border-color: var(--line-2) !important; }
+.table th {
+  background: var(--surface-2) !important;
+  color: var(--ink-3) !important;
+  border-color: var(--line-2) !important;
+  font-weight: 600 !important;
+}
+.table td { border-color: var(--line-2) !important; color: var(--ink) !important; }
+.table tbody tr:hover { background: var(--surface-2) !important; }
+
+/* ============================================================
+   6. 侧边栏 —— active 态 Apple 蓝软底
+   ============================================================ */
+.sidebar { background: rgba(255,255,255,0.72) !important; border-color: var(--line-2) !important; backdrop-filter: saturate(180%) blur(20px) !important; -webkit-backdrop-filter: saturate(180%) blur(20px) !important; }
+.sidebar-header { border-color: var(--line-2) !important; }
+.sidebar-link { border-radius: 10px !important; color: var(--ink-2) !important; }
+.sidebar-link:hover { background: rgba(0,0,0,0.045) !important; color: var(--ink) !important; }
+.sidebar-link-active {
+  background: var(--accent-soft) !important;
+  color: var(--accent-ink) !important;
+}
+.sidebar-link-active:hover { background: var(--accent-soft) !important; }
+
+/* ============================================================
+   7. 下拉 / 模态 / 对话框 —— 统一圆角与柔影
+   ============================================================ */
+.dropdown { border-radius: 14px !important; border-color: var(--line-2) !important; box-shadow: var(--card-shadow-lift) !important; }
+.dropdown-item:hover { background: var(--surface) !important; }
+.modal-content, .dialog-container { border-radius: var(--radius-lg) !important; border-color: var(--line-2) !important; box-shadow: var(--card-shadow-lift) !important; }
+.modal-header, .modal-footer, .dialog-header, .dialog-footer { border-color: var(--line-2) !important; }
+.dialog-footer { background: var(--surface-2) !important; }
+.modal-overlay, .dialog-overlay { backdrop-filter: blur(4px) !important; -webkit-backdrop-filter: blur(4px) !important; }
+
+/* ============================================================
+   8. Toast —— info 用 Apple 蓝
+   ============================================================ */
+.toast { border-radius: 14px !important; box-shadow: var(--card-shadow-lift) !important; }
+.toast-info { border-left-color: var(--accent) !important; }
+
+/* ============================================================
+   9. Tabs / 进度条 / 开关 —— 强调系统统一
+   ============================================================ */
+.tabs { border-radius: var(--pill) !important; background: rgba(0,0,0,0.05) !important; }
+.tab { border-radius: var(--pill) !important; color: var(--ink-3) !important; }
+.tab-active { background: #fff !important; color: var(--ink) !important; box-shadow: 0 1px 2px rgba(0,0,0,0.12) !important; }
+
+.progress { background: rgba(0,0,0,0.07) !important; border-radius: 6px !important; }
+.progress-bar { background: var(--accent) !important; }
+
+.switch { border-radius: var(--pill) !important; background: rgba(0,0,0,0.12) !important; }
+.switch-active { background: var(--accent) !important; }
+
+/* ============================================================
+   10. 代码 / 文字渐变 —— 收敛成纯色
+   ============================================================ */
+.code { background: var(--surface) !important; color: var(--accent-ink) !important; }
+.text-gradient {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: var(--ink) !important;
+}
+
+/* ============================================================
+   11. 高频 primary 工具类兜底（个别 view 直接写工具类而非组件类）
+   仅覆盖视觉色，不动布局。
+   ============================================================ */
+.bg-gradient-to-r.from-primary-500,
+.bg-gradient-to-br.from-primary-500,
+.bg-gradient-primary { background-image: none !important; background-color: var(--accent) !important; }
+
+/* ============================================================
+   12. DARK 模式 —— 克制处理：Apple 清新风以亮色为主。
+   保留 .dark 可用，但把 dark 卡片/底色提亮、去掉青色 glow，
+   强调色统一 Apple 蓝。（如老板决定彻底关 dark，把 §12 整段换成下方“关 dark”注释方案。）
+   ============================================================ */
+.dark body { background: #0b0b0c !important; color: #f2f2f5 !important; }
+.dark .card, .dark .glass-card, .dark .card-glass, .dark .glass,
+.dark .modal-content, .dark .dialog-container, .dark .dropdown, .dark .toast {
+  background: #1a1a1c !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 30px rgba(0,0,0,0.4) !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+.dark .input, .dark input, .dark textarea, .dark select {
+  background: #1a1a1c !important; border-color: rgba(255,255,255,0.10) !important; color: #f2f2f5 !important;
+}
+.dark .sidebar { background: rgba(20,20,22,0.8) !important; border-color: rgba(255,255,255,0.06) !important; }
+.dark .sidebar-link-active { background: rgba(0,113,227,0.18) !important; color: #6db0ff !important; }
+.dark .table th { background: #161618 !important; }
+
+/* —— 若彻底关 dark：注释掉上面 §12，启用下面一行 ——
+html.dark { color-scheme: light; } html.dark * { } 改由 main.ts 不再 toggle('dark') 更稳，
+建议在 initThemeClass 里强制 document.documentElement.classList.remove('dark')。
+*/

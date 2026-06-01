@@ -6,6 +6,7 @@ import i18n, { initI18n } from './i18n'
 import { useAppStore } from '@/stores/app'
 import './style.css'
 import './assets/styles/tokens.css' // LLMRELAY: 全局设计 token（Apple 清新风 + 3 方向）
+import './assets/styles/global-llmrelay.css' // LLMRELAY: Apple-clean 主题覆盖,必须在 tokens.css 之后
 
 function initThemeClass() {
   const savedTheme = localStorage.getItem('theme')
