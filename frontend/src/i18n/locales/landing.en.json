@@ -59,5 +59,23 @@
       "copy": "© 2026 LLMRELAY. An open model relay platform."
     },
     "dir": { "label": "Theme", "classic": "Classic", "equity": "Equity", "mono": "Mono" }
+  },
+  "auth": {
+    "backHome": "Back to home",
+    "loginTab": "Sign in",
+    "signupTab": "Sign up",
+    "login": { "title": "Welcome back", "sub": "Sign in to manage your keys and usage.", "submit": "Sign in", "submitting": "Signing in…", "forgot": "Forgot password?", "noAccount": "No account yet?", "toRegister": "Sign up free" },
+    "register": { "title": "Create account", "sub": "Get free credit on sign-up. Start in minutes.", "submit": "Create account", "submitting": "Creating…", "haveAccount": "Already have an account?", "toLogin": "Sign in", "terms": "By signing up you agree to our Terms and Privacy Policy.", "disabled": "Registration is currently closed." },
+    "email": "Email",
+    "password": "Password",
+    "emailPh": "you@example.com",
+    "pwdPh": "At least 8 characters",
+    "verifyCode": "Email code",
+    "codePh": "6-digit code",
+    "sendCode": "Send code",
+    "sending": "Sending…",
+    "resend": "Resend in {n}s",
+    "or": "or continue with",
+    "errors": { "emailInvalid": "Please enter a valid email address", "pwdShort": "Password must be at least 8 characters", "codeRequired": "Please enter the email verification code", "generic": "Something went wrong, please try again", "twofa": "This account has 2FA enabled — please complete verification in the original app." }
   }
 }

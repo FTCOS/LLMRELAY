@@ -59,5 +59,23 @@
       "copy": "© 2026 LLMRELAY. 一个开放的模型中转平台。"
     },
     "dir": { "label": "方向", "classic": "经典", "equity": "平权", "mono": "黑曜" }
+  },
+  "auth": {
+    "backHome": "返回首页",
+    "loginTab": "登录",
+    "signupTab": "注册",
+    "login": { "title": "欢迎回来", "sub": "登录以管理你的 Key 与用量。", "submit": "登录", "submitting": "登录中…", "forgot": "忘记密码？", "noAccount": "还没有账号？", "toRegister": "免费注册" },
+    "register": { "title": "创建账号", "sub": "注册即送体验额度，立即开始。", "submit": "创建账号", "submitting": "创建中…", "haveAccount": "已有账号？", "toLogin": "去登录", "terms": "注册即代表你同意我们的服务条款与隐私政策。", "disabled": "当前暂未开放注册。" },
+    "email": "邮箱",
+    "password": "密码",
+    "emailPh": "you@example.com",
+    "pwdPh": "至少 8 位字符",
+    "verifyCode": "邮箱验证码",
+    "codePh": "6 位验证码",
+    "sendCode": "发送验证码",
+    "sending": "发送中…",
+    "resend": "{n}s 后重发",
+    "or": "或使用以下方式",
+    "errors": { "emailInvalid": "请输入有效的邮箱地址", "pwdShort": "密码至少需要 8 位字符", "codeRequired": "请输入邮箱验证码", "generic": "操作失败，请稍后重试", "twofa": "该账号已开启两步验证，请在原系统完成验证。" }
   }
 }
