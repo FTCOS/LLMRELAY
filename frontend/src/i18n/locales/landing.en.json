@@ -1,14 +1,6 @@
 {
   "landing": {
-    "nav": {
-      "product": "Product",
-      "models": "Models",
-      "pricing": "Pricing",
-      "docs": "Docs",
-      "usage": "Usage lookup",
-      "login": "Sign in",
-      "signup": "Get started"
-    },
+    "nav": { "product": "Product", "models": "Models", "pricing": "Pricing", "docs": "Docs", "usage": "Usage lookup", "login": "Sign in", "signup": "Get started" },
     "hero": {
       "eyebrow": "Model Equality · 模型平权",
       "title1": "Top models,",
@@ -22,9 +14,7 @@
       "comment": "# drives native tools · 原生工具直接驱动",
       "connected": "connected · 4 models · 1 key"
     },
-    "tools": {
-      "title": "Works seamlessly with the native tools you already use"
-    },
+    "tools": { "title": "Works seamlessly with the native tools you already use" },
     "models": {
       "eyebrow": "Every major model",
       "title": "One endpoint. Every model.",
@@ -38,14 +28,10 @@
     "values": {
       "eyebrow": "Why LLMRELAY",
       "title": "Lowering the bar to top models, for all.",
-      "v1t": "One key, every model",
-      "v1d": "A single API key for Claude, GPT, DeepSeek, Qwen and more. OpenAI-compatible — migrate with zero changes.",
-      "v2t": "The fairest price",
-      "v2d": "Token-level billing, shared pooling to split costs. The same models, at a lower unit price — pay only for what you use.",
-      "v3t": "Native tools, no friction",
-      "v3d": "Drives Claude Code, Codex, Cursor and other native tools directly — not a single line of code to change.",
-      "v4t": "Stable & smart routing",
-      "v4d": "Multi-account load balancing, sticky sessions and concurrency control. 99.95% uptime, no dropped requests."
+      "v1t": "One key, every model", "v1d": "A single API key for Claude, GPT, DeepSeek, Qwen and more. OpenAI-compatible — migrate with zero changes.",
+      "v2t": "The fairest price", "v2d": "Token-level billing, shared pooling to split costs. The same models, at a lower unit price — pay only for what you use.",
+      "v3t": "Native tools, no friction", "v3d": "Drives Claude Code, Codex, Cursor and other native tools directly — not a single line of code to change.",
+      "v4t": "Stable & smart routing", "v4d": "Multi-account load balancing, sticky sessions and concurrency control. 99.95% uptime, no dropped requests."
     },
     "manifesto": {
       "eyebrow": "What we believe",
@@ -56,92 +42,33 @@
       "eyebrow": "Transparent pricing",
       "title": "Pay as you go. No tricks.",
       "sub": "Top up and start instantly. Balance never expires. Billed by token in real time.",
-      "tag1": "Try it",
-      "name1": "Pay as you go",
-      "price1": "$0",
-      "unit1": "to start",
-      "tag2": "Most popular",
-      "name2": "Wallet top-up",
-      "price2": "-15%",
-      "unit2": "vs. average direct price",
-      "tag3": "Teams",
-      "name3": "Team / Enterprise",
-      "price3": "Custom",
-      "unit3": "quotas & invoicing",
-      "f1a": "Free credit on sign-up",
-      "f1b": "All models available",
-      "f1c": "OpenAI-compatible API",
-      "f1d": "Community support",
-      "f2a": "Token-level billing",
-      "f2b": "Lower unit price via pooling",
-      "f2c": "Multi-key quotas",
-      "f2d": "Usage dashboard & alerts",
-      "f3a": "Member & quota allocation",
-      "f3b": "Dedicated lanes & SLA",
-      "f3c": "Optional self-hosting",
-      "f3d": "Priority support",
-      "cta1": "Start free",
-      "cta2": "Top up now",
-      "cta3": "Contact us"
+      "tag1": "Try it", "name1": "Pay as you go", "price1": "$0", "unit1": "to start",
+      "tag2": "Most popular", "name2": "Wallet top-up", "price2": "-15%", "unit2": "vs. average direct price",
+      "tag3": "Teams", "name3": "Team / Enterprise", "price3": "Custom", "unit3": "quotas & invoicing",
+      "f1a": "Free credit on sign-up", "f1b": "All models available", "f1c": "OpenAI-compatible API", "f1d": "Community support",
+      "f2a": "Token-level billing", "f2b": "Lower unit price via pooling", "f2c": "Multi-key quotas", "f2d": "Usage dashboard & alerts",
+      "f3a": "Member & quota allocation", "f3b": "Dedicated lanes & SLA", "f3c": "Optional self-hosting", "f3d": "Priority support",
+      "cta1": "Start free", "cta2": "Top up now", "cta3": "Contact us"
     },
-    "ctaband": {
-      "title": "Put top models in everyone's hands — today.",
-      "sub": "Sign up in a minute. Free credit, no credit card.",
-      "cta1": "Start free",
-      "cta2": "Read the docs"
-    },
+    "ctaband": { "title": "Put top models in everyone's hands — today.", "sub": "Sign up in a minute. Free credit, no credit card.", "cta1": "Start free", "cta2": "Read the docs" },
     "footer": {
       "tagline": "Model equality — frontier intelligence, within everyone's reach.",
-      "col1": "Product",
-      "col1a": "Models",
-      "col1b": "Pricing",
-      "col1c": "API Docs",
-      "col1d": "Status",
-      "col2": "Resources",
-      "col2a": "Quickstart",
-      "col2b": "Pooling guide",
-      "col2c": "FAQ",
-      "col2d": "Changelog",
-      "col3": "Company",
-      "col3a": "About",
-      "col3b": "Terms",
-      "col3c": "Privacy",
-      "col3d": "Contact",
+      "col1": "Product", "col1a": "Models", "col1b": "Pricing", "col1c": "API Docs", "col1d": "Status",
+      "col2": "Resources", "col2a": "Quickstart", "col2b": "Pooling guide", "col2c": "FAQ", "col2d": "Changelog",
+      "col3": "Company", "col3a": "About", "col3b": "Terms", "col3c": "Privacy", "col3d": "Contact",
       "copy": "© 2026 LLMRELAY. An open model relay platform."
     },
-    "dir": {
-      "label": "Theme",
-      "classic": "Classic",
-      "equity": "Equity",
-      "mono": "Mono"
-    }
+    "dir": { "label": "Theme", "classic": "Classic", "equity": "Equity", "mono": "Mono" }
   },
   "auth": {
     "backHome": "Back to home",
     "loginTab": "Sign in",
     "signupTab": "Sign up",
-    "login": {
-      "title": "Welcome back",
-      "sub": "Sign in to manage your keys and usage.",
-      "submit": "Sign in",
-      "submitting": "Signing in…",
-      "forgot": "Forgot password?",
-      "noAccount": "No account yet?",
-      "toRegister": "Sign up free"
-    },
-    "register": {
-      "title": "Create account",
-      "sub": "Get free credit on sign-up. Start in minutes.",
-      "submit": "Create account",
-      "submitting": "Creating…",
-      "haveAccount": "Already have an account?",
-      "toLogin": "Sign in",
-      "terms": "By signing up you agree to our Terms and Privacy Policy.",
-      "disabled": "Registration is currently closed."
-    },
+    "login": { "title": "Welcome back", "sub": "Sign in to manage your keys and usage.", "submit": "Sign in", "submitting": "Signing in…", "forgot": "Forgot password?", "noAccount": "No account yet?", "toRegister": "Sign up free" },
+    "register": { "title": "Create account", "sub": "Get free credit on sign-up. Start in minutes.", "submit": "Create account", "submitting": "Creating…", "haveAccount": "Already have an account?", "toLogin": "Sign in", "terms": "By signing up you agree to our Terms and Privacy Policy.", "disabled": "Registration is currently closed." },
     "email": "Email",
     "password": "Password",
-    "emailPh": "you{'@'}example.com",
+    "emailPh": "you@example.com",
     "pwdPh": "At least 8 characters",
     "verifyCode": "Email code",
     "codePh": "6-digit code",
@@ -149,13 +76,7 @@
     "sending": "Sending…",
     "resend": "Resend in {n}s",
     "or": "or continue with",
-    "errors": {
-      "emailInvalid": "Please enter a valid email address",
-      "pwdShort": "Password must be at least 8 characters",
-      "codeRequired": "Please enter the email verification code",
-      "generic": "Something went wrong, please try again",
-      "twofa": "This account has 2FA enabled — please complete verification in the original app."
-    }
+    "errors": { "emailInvalid": "Please enter a valid email address", "pwdShort": "Password must be at least 8 characters", "codeRequired": "Please enter the email verification code", "generic": "Something went wrong, please try again", "twofa": "This account has 2FA enabled — please complete verification in the original app." }
   },
   "keyusage": {
     "nav": "Usage lookup",
@@ -180,19 +101,49 @@
     "modeQuota": "Quota limited",
     "modeSub": "Subscription",
     "detailTitle": "Details",
-    "rows": {
-      "name": "Key name",
-      "mode": "Billing mode",
-      "group": "Group",
-      "balance": "Balance",
-      "createdAt": "Created",
-      "expiresAt": "Expires",
-      "lastUsed": "Last used",
-      "never": "Never",
-      "unnamed": "Unnamed key"
-    },
+    "rows": { "name": "Key name", "mode": "Billing mode", "group": "Group", "balance": "Balance", "createdAt": "Created", "expiresAt": "Expires", "lastUsed": "Last used", "never": "Never", "unnamed": "Unnamed key" },
     "empty": "Enter an API key above to view its usage.",
     "errInvalid": "Invalid or disabled key — please check and try again.",
     "errGeneric": "Lookup failed, please try again."
+  },
+  "appShell": {
+    "nav": { "overview": "Overview", "keys": "API Keys", "usage": "Usage", "billing": "Billing", "settings": "Settings", "adminSection": "Admin", "adminDashboard": "Console", "users": "Users", "accounts": "Accounts", "redeem": "Redeem" },
+    "header": { "profile": "Profile", "keys": "API Keys", "logout": "Sign out" },
+    "dir": { "label": "Theme", "classic": "Classic", "equity": "Equity", "mono": "Mono" },
+    "version": "Version"
+  },
+  "dashboard": {
+    "greetMorning": "Good morning",
+    "greetAfternoon": "Good afternoon",
+    "greetEvening": "Good evening",
+    "greetSub": "Here's your relay overview for today.",
+    "topup": "Top up",
+    "refresh": "Refresh",
+    "stats": {
+      "balance": "Balance", "balanceSub": "available",
+      "today": "Today's usage", "todaySub": "actual cost today",
+      "reqs": "Requests today", "reqsSub": "{rate} success",
+      "keys": "Active keys", "keysSub": "{total} total"
+    },
+    "quotaTitle": "Quota by platform",
+    "quotaSub": "Used / limit this month",
+    "noLimit": "Unlimited",
+    "usageTitle": "Last 7 days",
+    "usageUnit": "Tokens",
+    "usageReq": "Requests",
+    "modelTitle": "Model distribution",
+    "modelUnit": "by tokens",
+    "keysTitle": "API Keys",
+    "keysSub": "For native tools and SDKs",
+    "newKey": "New key",
+    "recentTitle": "Recent requests",
+    "table": { "name": "Name", "key": "Key", "status": "Status", "created": "Created", "time": "Time", "model": "Model", "tokens": "Tokens", "cost": "Cost", "action": "Action" },
+    "active": "Active",
+    "inactive": "Inactive",
+    "copy": "Copy",
+    "copied": "Copied",
+    "empty": "No data yet",
+    "loadErr": "Failed to load, please try again.",
+    "ok": "OK"
   }
 }

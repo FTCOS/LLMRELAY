@@ -191,12 +191,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: () => import('@/views/user/DashboardView.vue'),
+    component: () => import('@/views/user/DashboardLLMRELAY.vue'),
     meta: {
       requiresAuth: true,
       requiresAdmin: false,
       title: 'Dashboard',
-      titleKey: 'dashboard.title',
+      titleKey: 'appShell.nav.overview',
       descriptionKey: 'dashboard.welcomeMessage'
     }
   },
