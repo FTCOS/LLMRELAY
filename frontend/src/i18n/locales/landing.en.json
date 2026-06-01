@@ -68,7 +68,7 @@
     "register": { "title": "Create account", "sub": "Get free credit on sign-up. Start in minutes.", "submit": "Create account", "submitting": "Creating…", "haveAccount": "Already have an account?", "toLogin": "Sign in", "terms": "By signing up you agree to our Terms and Privacy Policy.", "disabled": "Registration is currently closed." },
     "email": "Email",
     "password": "Password",
-    "emailPh": "you@example.com",
+    "emailPh": "you{'@'}example.com",
     "pwdPh": "At least 8 characters",
     "verifyCode": "Email code",
     "codePh": "6-digit code",

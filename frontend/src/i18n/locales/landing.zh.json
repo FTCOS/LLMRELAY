@@ -68,7 +68,7 @@
     "register": { "title": "创建账号", "sub": "注册即送体验额度，立即开始。", "submit": "创建账号", "submitting": "创建中…", "haveAccount": "已有账号？", "toLogin": "去登录", "terms": "注册即代表你同意我们的服务条款与隐私政策。", "disabled": "当前暂未开放注册。" },
     "email": "邮箱",
     "password": "密码",
-    "emailPh": "you@example.com",
+    "emailPh": "you{'@'}example.com",
     "pwdPh": "至少 8 位字符",
     "verifyCode": "邮箱验证码",
     "codePh": "6 位验证码",
