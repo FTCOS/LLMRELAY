@@ -1073,6 +1073,7 @@ import type { Column } from '@/components/common/types'
 import type { BatchApiKeyUsageStats } from '@/api/usage'
 import { formatDateTime } from '@/utils/format'
 import { maskApiKey } from '@/utils/maskApiKey'
+import { DEFAULT_SITE_NAME } from '@/constants/branding'
 import {
   buildCcSwitchImportDeeplink,
   type CcSwitchClientType
@@ -1724,7 +1725,7 @@ const executeCcsImport = (row: ApiKey, clientType: CcSwitchClientType) => {
       };
     }
   })`
-  const providerName = (publicSettings.value?.site_name || 'sub2api').trim() || 'sub2api'
+  const providerName = (publicSettings.value?.site_name || DEFAULT_SITE_NAME).trim() || DEFAULT_SITE_NAME
   const deeplink = buildCcSwitchImportDeeplink({
     baseUrl,
     platform,

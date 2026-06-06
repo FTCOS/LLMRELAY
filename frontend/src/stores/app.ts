@@ -7,6 +7,7 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type { Toast, ToastType, PublicSettings } from '@/types'
 import { i18n } from '@/i18n'
+import { DEFAULT_SITE_NAME, normalizeSiteName, normalizeSiteSubtitle } from '@/constants/branding'
 import {
   checkUpdates as checkUpdatesAPI,
   type VersionInfo,
@@ -25,7 +26,7 @@ export const useAppStore = defineStore('app', () => {
   // Public settings cache state
   const publicSettingsLoaded = ref<boolean>(false)
   const publicSettingsLoading = ref<boolean>(false)
-  const siteName = ref<string>('Sub2API')
+  const siteName = ref<string>(DEFAULT_SITE_NAME)
   const siteLogo = ref<string>('')
   const siteVersion = ref<string>('')
   const contactInfo = ref<string>('')
@@ -288,16 +289,21 @@ export const useAppStore = defineStore('app', () => {
    * Apply settings to store state (internal helper to avoid code duplication)
    */
   function applySettings(config: PublicSettings): void {
-    if (typeof window !== 'undefined') {
-      window.__APP_CONFIG__ = { ...config }
+    const normalizedConfig: PublicSettings = {
+      ...config,
+      site_name: normalizeSiteName(config.site_name),
+      site_subtitle: normalizeSiteSubtitle(config.site_subtitle),
     }
-    cachedPublicSettings.value = config
-    siteName.value = config.site_name || 'Sub2API'
-    siteLogo.value = config.site_logo || ''
-    siteVersion.value = config.version || ''
-    contactInfo.value = config.contact_info || ''
-    apiBaseUrl.value = config.api_base_url || ''
-    docUrl.value = config.doc_url || ''
+    if (typeof window !== 'undefined') {
+      window.__APP_CONFIG__ = { ...normalizedConfig }
+    }
+    cachedPublicSettings.value = normalizedConfig
+    siteName.value = normalizedConfig.site_name
+    siteLogo.value = normalizedConfig.site_logo || ''
+    siteVersion.value = normalizedConfig.version || ''
+    contactInfo.value = normalizedConfig.contact_info || ''
+    apiBaseUrl.value = normalizedConfig.api_base_url || ''
+    docUrl.value = normalizedConfig.doc_url || ''
     publicSettingsLoaded.value = true
   }
 
